@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+    <style>
+        .card-title {
+            font-size: 40px; /* 調整字體大小為24像素 */
+            text-align: center;
+        }
+        
+        .card-text {
+            font-size: 30px; /* 調整card-text的字體大小為16像素 */
+            text-align: center;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            font-size: 30px;
+            /* 更改按鈕的字體 */
+            font-family: Arial, sans-serif;
+        }
+        .page-title {
+            font-size: 66px;
+            font-weight: bold;
+        }
+        body {
+            background-color: #ffc0cb; /* 使用淡紅色的背景色碼 */
+            text-align: center;
+        }
+    </style>
+    <title>食物展示</title>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="page-title">食物圖片展示</h1>
+    <div class="mt-4">
+        <button class="btn btn-primary" onclick="scrollToFood('food1')">漢堡</button>
+        <button class="btn btn-primary" onclick="scrollToFood('food2')">炸丸子</button>
+        <button class="btn btn-primary" onclick="scrollToFood('food3')">薯條</button>
+    </div>
+    <div class="row mt-4" id="food1">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body card-content">
+                    <h5 class="card-title">漢堡</h5>
+                    <p class="card-text">這是一個美味的漢堡。</p>
+                </div>
+                <img src="https://cdn-icons-png.flaticon.com/256/3075/3075977.png" class="card-img-top" alt="食物圖片">
+
+            </div>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ulhRORJpuBM?si=oOmI_vPmcN-Bj3GV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="col-md-4" id="food2">
+            <div class="card">
+                <div class="card-body card-content">
+                    <h5 class="card-title">炸丸子</h5>
+                    <p class="card-text">這是一個美味的炸丸子。</p>
+                </div>
+                <img src="https://gd-hbimg.huaban.com/1f69fdb0724f2516bf2e6efa3d63e7a474985701a0ba-PWpLZP_fw658" class="card-img-top" alt="食物圖片">
+
+            </div>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dzNPUDmofzQ?si=Bc26d-z01p_09T7R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="row mt-4" id="food3">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body card-content">
+                        <h5 class="card-title">薯條</h5>
+                        <p class="card-text">這是一個好吃的薯條。</p>
+                    </div>
+                    <img src="data:image/jpeg;base64,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" class="card-img-top" alt="食物圖片">
+    
+                </div>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vZ6HFHStTAI?si=4bfyXf7gmmO0BQ5y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+<script>
+    // JavaScript函數用於滾動到特定的錨點
+    function scrollToFood(foodId) {
+        var element = document.getElementById(foodId);
+        element.scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+</body>
+</html>
